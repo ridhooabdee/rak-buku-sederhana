@@ -1,0 +1,478 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+@font-face {
+  font-family: "Quicksand";
+  src: url(Quicksand/Quicksand-VariableFont_wght.ttf) format("truetype");
+}
+:root {
+  --teal: teal;
+  --white: white;
+  --black: black;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+body {
+  font-family: "Quicksand", sans-serif;
+  width: 100%;
+}
+.header {
+  width: 100%;
+  background-color: var(--teal);
+  padding: 1.2rem;
+  text-align: center;
+  position: sticky;
+  top: 0;
+}
+.header h1 {
+  font-size: 2rem;
+  font-weight: 700;
+}
+.main {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+.main .box-penambahan {
+  width: 60vw;
+  margin: 1.3rem auto;
+  border: 2px solid var(--teal);
+  border-radius: 2em;
+  padding: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2rem;
+}
+.main .box-penambahan h2 {
+  font-size: 1.5em;
+  font-weight: 700;
+  text-align: center;
+}
+.block {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  margin: 0.5rem 0;
+}
+.form-penambahan label {
+  font-size: 1em;
+  font-weight: 600;
+}
+.block input {
+  border-radius: 2em;
+}
+.form-penambahan div > input {
+  padding: 0.5rem;
+}
+.form-penambahan .input-inline {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5em;
+  align-items: center;
+}
+input[type="checkbox"] {
+  width: 20px !important;
+  height: 20px !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  vertical-align: middle;
+  appearance: none;
+  border: 1px solid var(--black);
+  border-radius: 20%;
+  font-size: 1em;
+  font-weight: 700;
+  cursor: pointer;
+}
+input[type="checkbox"]:checked {
+  background-color: green;
+}
+input[type="checkbox"]:checked:after {
+  content: "\2713";
+  color: var(--white);
+}
+.form-penambahan button {
+  display: block;
+  width: 100%;
+  margin-block: 0.5rem;
+  border-radius: 2em;
+  padding: 0.5rem;
+  font-size: 0.8em;
+  font-weight: 600;
+  transition: 0.3s;
+  background-color: var(--teal);
+  color: var(--black);
+  cursor: pointer;
+}
+.form-penambahan button > span {
+  color: var(--white);
+}
+.form-penambahan button:hover {
+  background-color: var(--white);
+  color: var(--black);
+}
+.form-penambahan button:active {
+  background-color: var(--teal);
+  color: var(--black);
+}
+.form-penambahan button:hover > span {
+  color: rgb(0, 100, 100);
+}
+.form-penambahan button:active > span {
+  color: var(--white);
+}
+.main .box-pencarian {
+  width: 60vw;
+  margin: 1.3rem auto;
+  border: 2px solid var(--teal);
+  border-radius: 2em;
+  padding: 1.2rem;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2rem;
+}
+.main .box-pencarian h2 {
+  font-size: 1.5em;
+  font-weight: 700;
+  text-align: center;
+}
+.main .box-pencarian form {
+  display: flex;
+  width: 100%;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.main .box-pencarian form label {
+  display: flex;
+  align-items: center;
+  font-size: 1em;
+  font-weight: 600;
+}
+.main .box-pencarian form input {
+  flex-grow: 2;
+  padding: 0.5rem;
+  border-radius: 2em;
+}
+.main .box-pencarian form button {
+  flex-grow: 1;
+  padding: 0.5rem;
+  border-radius: 2em;
+  font-size: 0.8em;
+  font-weight: 600;
+  background-color: var(--teal);
+  color: var(--white);
+  transition: 0.3s;
+  cursor: pointer;
+}
+.main .box-pencarian form button:hover {
+  background-color: var(--white);
+  color: var(--black);
+}
+.main .box-pencarian form button:active {
+  background-color: var(--teal);
+  color: var(--white);
+}
+.box-belum-selesai {
+  width: 60vw;
+  margin: 1.3rem auto;
+  border: 2px solid var(--teal);
+  border-radius: 2em;
+  padding: 1.2rem;
+}
+.box-belum-selesai h2 {
+  font-size: 1.2em;
+  font-weight: 700;
+}
+.box-belum-selesai .list-buku {
+  display: block;
+}
+.box-belum-selesai .list-buku .container {
+  margin-top: 1em;
+  border: 2px solid var(--teal);
+  border-radius: 20px;
+  padding: 0.7em 1.4em;
+  background: var(--white);
+  box-shadow: 0 0 10px 1px #86a789;
+}
+.container .teks-container {
+  font-weight: 700;
+  line-height: 1.5em;
+}
+.container .teks-container h3 {
+  font-size: 1.2em;
+  margin-bottom: 0.4em;
+}
+.container .teks-container.line {
+  text-decoration: line-through;
+}
+.container .div-tombol {
+  margin: 0.5em;
+  display: flex;
+  justify-content: center;
+}
+.container .div-tombol > * {
+  margin-inline: 0.7em;
+}
+.check-button {
+  width: 35px;
+  height: 35px;
+  background: url("check-circle-svgrepo-com.svg");
+  background-size: contain;
+  margin-left: auto;
+  cursor: pointer;
+  border: none;
+  transition: 0.3s;
+}
+.check-button:hover {
+  transform: scale(1.2);
+}
+.sementara {
+  width: max-content;
+  border-radius: 1em;
+  font-size: 1em;
+  font-family: "Quicksand", sans-serif;
+  padding: 0.5em;
+  font-weight: 600;
+  color: var(--white);
+  background-color: var(--teal);
+  transition: 0.3s;
+  cursor: pointer;
+}
+.sementara:hover {
+  color: var(--black);
+  background-color: var(--white);
+}
+.trash-button {
+  width: 35px;
+  height: 35px;
+  background: url("trash-bin-minimalistic-svgrepo-com.svg");
+  background-size: contain;
+  margin-left: 16px;
+  cursor: pointer;
+  border: none;
+  transition: 0.3s;
+}
+.trash-button:hover {
+  transform: scale(1.2);
+}
+.dialog {
+  border-radius: 1em;
+  border: 2px solid #222;
+  background-color: var(--white);
+  width: 30vw;
+  height: 30vw;
+  margin: auto;
+  position: fixed;
+  top: 30%;
+  left: 35%;
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3em;
+  flex-direction: column;
+  padding: 1em;
+}
+.dialog .close {
+  font-family: "Quicksand", sans-serif;
+  font-weight: 600;
+  font-size: 1.2em;
+  cursor: pointer;
+  color: red;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 0.7em;
+  transition: 0.3s;
+}
+.dialog .close:hover {
+  background-color: var(--black);
+}
+.dialog .close:active {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+.dialog h3 {
+  text-align: center;
+  font-family: "Quicksand", sans-serif;
+  font-weight: 600;
+  font-size: 1.2em;
+}
+.bungkus-tombol {
+  display: flex;
+  gap: 2em;
+}
+.bungkus-tombol .iya,
+.tidak {
+  width: max-content;
+  border-radius: 1em;
+  font-size: 1em;
+  font-family: "Quicksand", sans-serif;
+  padding: 0.5em;
+  font-weight: 600;
+  color: var(--white);
+  background-color: var(--teal);
+  transition: 0.3s;
+  cursor: pointer;
+}
+.bungkus-tombol .iya:hover,
+.tidak:hover {
+  color: var(--black);
+  background-color: var(--white);
+}
+.bungkus-tombol .iya:active,
+.tidak:active {
+  color: var(--white);
+  background-color: var(--teal);
+}
+.undo-button {
+  width: 35px;
+  height: 35px;
+  background: url("undo-left-round-square-svgrepo-com.svg");
+  background-size: contain;
+  margin-left: auto;
+  cursor: pointer;
+  border: none;
+  transition: 0.3s;
+}
+.undo-button:hover {
+  transform: scale(1.2);
+}
+@media screen and (max-width: 768px) {
+  .box-pencarian form {
+    display: flex;
+    flex-direction: column;
+  }
+  .box-pencarian form button {
+    flex-grow: 1;
+  }
+}

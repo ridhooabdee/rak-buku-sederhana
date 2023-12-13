@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>rak buku</title>
+    <link rel="stylesheet" href="index.css" />
+   </head>
+  <body>
+    <header class="header">
+      <h1>rak buku ridho</h1>
+      <div class="dark-mode-toogle">
+        <i class="tombolnya"></i>
+      </div>
+    </header>
+    <main class="main">
+      <section class="box-penambahan">
+        <h2>masukkan identitas buku</h2>
+        <form class="form-penambahan">
+          <div class="block">
+            <label for="judul-buku">Title</label>
+            <input
+              type="text                                "   n
+              name="judul-buku"
+              id="judul-buku"
+              maxlength="32"
+              required
+              placeholder="Judul Buku"
+              autofocus
+            />
+          </div>
+          <div class="block">
+            <label for="penulis">Author</label>
+            <input
+              type="text"
+              name="penulis"
+              id="penulis"
+              required
+              placeholder="Penulis"
+            />
+          </div>
+          <div class="block">
+            <label for="tahun">Year</label>
+            <input
+              type="number"
+              name="tahun"
+              id="tahun"
+              minlength="4"
+              min="1945"
+              max="2023"
+              required
+              placeholder="Tahun"
+            />
+          </div>
+          <div class="input-inline">
+            <label for="checkbox">selesai dibaca</label>
+            <input type="checkbox" name="checkbox" id="checkbox" />
+          </div>
+          <button type="submit">
+            masukkan buku ke rak <span>yang belum selesai dibaca</span>
+          </button>
+        </form>
+      </section>
+      <section class="box-pencarian">
+        <h2>Cari Buku</h2>
+        <form class="form-pencarian">
+          <label for="search">Title</label>
+          <input
+            type="search"
+            placeholder="Judul Buku"
+            id="search"
+            name="search"
+          />
+          <button type="submit" id="submit-pencarian">Cari</button>
+        </form>
+      </section>
+      <section class="box-belum-selesai">
+        <h2>Belum Selesai Dibaca</h2>
+        <div id="belum-dibaca" class="list-buku"></div>
+      </section>
+      <section class="box-belum-selesai">
+        <h2>Selesai Dibaca</h2>
+        <div id="selesai-dibaca" class="list-buku"></div>
+      </section>
+    </main>
+    <script src="index.js"></script>
+  </body>
+</html>
